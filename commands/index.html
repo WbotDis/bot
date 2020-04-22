@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/media_query.css">
+    <link rel="icon" href="sources/2a4308918052ef061941852156a440cc.gif" type="image/gif" >
+    <link rel="stylesheet" rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <title>Wbot - Commandos</title>
+</head>
+
+<body>
+    <div id="__nuxt">
+        <div id="__layout">
+            <div id="__wrapper">
+                <nav class="nav">
+                    <div class="wrapper">
+                        <a href="../index.html" class="logo nuxt-link-active">
+                            <img src="../sources/2a4308918052ef061941852156a440cc.gif" alt="W-Bot logo"
+                                draggable="false" class="image">
+                        </a>
+                        <div class="links desktop">
+                            <a id="Wbot" href="../index.html" class="link">Wbot</a>
+                            <a href="https://discordapp.com/api/oauth2/authorize?client_id=687331352139399208&permissions=269494300&scope=bot" class="link">Invítame</a>
+                            <a href="../commands/" class="link">Commandos</a>
+                            <a href="../support/" class="link">Soporte</a>
+                        </div>
+                        <a href="#" id="btnlogin" class="btn medium login">Login</a>
+                    </div>
+                </nav>
+                <main id="__content" class="commands">
+                    <div class="intro">
+                        <h2 class="title">Comandos</h2>
+                        <!--<div class="search">
+                            <input id="searchInput" type="text" class="searchbar" placeholder="Buscar..." autocomplete="off">
+                            <p id="searchClear" class="clear">
+                                <i class="fas fa-times icon"></i>
+                            </p>
+                        </div>-->
+                    </div>
+                    <div class="main">
+                        <div class="categories">
+                            <p id="all" onclick="Show('all',this)" class="btn medium grey-dark category selected">Todos</p>
+                            <p id="Información" onclick="Show('Información',this)" class="btn medium category">Información
+                            <p id="Importante" onclick="Show('Importante',this)" class="btn medium category">Importante</p>
+                            <p id="Juegos" onclick="Show('Juegos',this)" class="btn medium category">Juegos</p>
+                            <p id="Minecraft" onclick="Show('Minecraft',this)" class="btn medium category">Minecraft</p>
+                            <p id="Diversión" onclick="Show('Diversión',this)" class="btn medium category">Diversión</p>
+                            <p id="Bot_Info" onclick="Show('Bot_Info',this)" class="btn medium category">Bot Info</p>
+                            <p id="Jugador" onclick="Show('Jugador',this)" class="btn medium category">Jugador</p>
+                            <p id="Staff" onclick="Show('Staff',this)" class="btn medium category">Staff</p>
+                            <p id="Economia" onclick="Show('Economia',this)" class="btn medium category">Economia</p>
+                        </div>
+                        <div class="wrapper">
+                            <!--  Información  -->
+                            <div id="help" onclick="Activate(this)" class="command Información active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.help</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Muestra la lista de comandos disponibles</p>
+                                    <p class="example">Ejemplo: .help</p>
+                                </div>
+                            </div>
+
+                            <div id="info" onclick="Activate(this)" class="command Información active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.info</p>
+                                    <p class="usage">&lt;Usuario&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Podras ver tu nivel y experiencia</p>
+                                    <p class="example">Ejemplo: .info @Carlos </p>
+                                </div>
+                            </div>
+                            <!--  Importante  -->
+                            <div id="serverboost" onclick="Activate(this)" class="command Importante active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.server-boost</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Muestra los boost de un servidor</p>
+                                    <p class="example">Ejemplo: .server-boost</p>
+                                </div>
+                            </div>
+
+                            <div id="ranking" onclick="Activate(this)" class="command Importante active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.ranking</p>
+                                    <p class="usage">&lt;Pagina&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Muestra la lista del Top Global</p>
+                                    <p class="example">Ejemplo: .ranking 1</p>
+                                </div>
+                            </div>
+
+                            <div id="covid19" onclick="Activate(this)" class="command Importante active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.covid-19</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Muestra las estadisticas del Covid-19</p>
+                                    <p class="example">Ejemplo: .covid-19</p>
+                                </div>
+                            </div>
+
+                            <div id="clima" onclick="Activate(this)" class="command Importante active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.clima</p>
+                                    <p class="usage">&lt;Ciudad o Pais&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Muestra las estadisticas del clima por pais o ciudad</p>
+                                    <p class="example">Ejemplo: .clima peru</p>
+                                </div>
+                            </div>
+                            <!--  Juegos  -->
+                            <div id="love" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.love</p>
+                                    <p class="usage">&lt;Usuario&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Prueba tu amor de ti y de tus amigos</p>
+                                    <p class="example">Ejemplo: .love @Pepito</p>
+                                </div>
+                            </div>
+
+                            <div id="ppt" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.ppt</p>
+                                    <p class="usage">&lt;Piedra ┋ Papel ┋ Tijera&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Piedra, papel o tijera tu elijes</p>
+                                    <p class="example">Ejemplo: .ppt tijera</p>
+                                </div>
+                            </div>
+
+                            <div id="ping" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.ping</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira tu conexion en cada servidor</p>
+                                    <p class="example">Ejemplo: .ping</p>
+                                </div>
+                            </div>
+
+                            <div id="pool" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.pool</p>
+                                    <p class="usage">&lt;Pregunta&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Respondere tu pregunta sabiamente</p>
+                                    <p class="example">Ejemplo: .pool ¿El mejor bot de todos?</p>
+                                </div>
+                            </div>
+
+                            <div id="pinfo" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.pinfo</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira la lista de personajes disponibles</p>
+                                    <p class="example">Ejemplo: .pinfo</p>
+                                </div>
+                            </div>
+
+                            <div id="minas" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.minas</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Un juego de buscar minas muy entretenido</p>
+                                    <p class="example">Ejemplo: .minas</p>
+                                </div>
+                            </div>
+
+                            <div id="dm" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.dm</p>
+                                    <p class="usage">&lt;Mensaje&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Has que WBot te envie mensajes a tu privado</p>
+                                    <p class="example">Ejemplo: .dm Hola WBot</p>
+                                </div>
+                            </div>
+
+                            <div id="mclogro" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.mclogro</p>
+                                    <p class="usage">&lt;Mensaje&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Envia mensajes al estilo de minecraft</p>
+                                    <p class="example">Ejemplo: .mclogro !Vendo Papas!</p>
+                                </div>
+                            </div>
+
+                            <div id="random" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.random</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Prueba tu suerte, mientras mas alto el numero mejor</p>
+                                    <p class="example">Ejemplo: .random</p>
+                                </div>
+                            </div>
+
+                            <div id="embed" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.embed</p>
+                                    <p class="usage">&lt;Mensaje&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Envia un mensaje embed colorido</p>
+                                    <p class="example">Ejemplo: .embed Hola WBot</p>
+                                </div>
+                            </div>
+
+                            <div id="send" onclick="Activate(this)" class="command Juegos active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.send</p>
+                                    <p class="usage">&lt;Mensaje&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Envia un mensaje a todo el servidor</p>
+                                    <p class="example">Ejemplo: .send Hola WBot</p>
+                                </div>
+                            </div>
+                            <!--  Minecraft  -->
+                            <div id="head" onclick="Activate(this)" class="command Minecraft active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.head</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Busca la cabeza tu amigo de Minecraft</p>
+                                    <p class="example">Ejemplo: .head MikeeeYTY</p>
+                                </div>
+                            </div>
+
+                            <div id="body" onclick="Activate(this)" class="command Minecraft active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.body</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Busca el cuerpo de tu amigo de Minecraft</p>
+                                    <p class="example">Ejemplo: .body MikeeeYTY</p>
+                                </div>
+                            </div>
+
+                            <div id="svmc" onclick="Activate(this)" class="command Minecraft active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.svmc</p>
+                                    <p class="usage">&lt;Servidor&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Busca tu servidor favorito</p>
+                                    <p class="example">Ejemplo: .svmc Hypixel</p>
+                                </div>
+                            </div>
+                            <!--  Diversión  -->
+                            <div id="meme" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.meme</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Memes randoms y divertidos</p>
+                                    <p class="example">Ejemplo: .meme</p>
+                                </div>
+                            </div>
+
+                            <div id="cookie" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.cookie</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Dale una galleta a tu amigo</p>
+                                    <p class="example">Ejemplo: .cookie @Pepito</p>
+                                </div>
+                            </div>
+
+                            <div id="auto" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.auto</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Maneja como todo un profesional</p>
+                                    <p class="example">Ejemplo: .auto</p>
+                                </div>
+                            </div>
+
+                            <div id="trump" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.trump</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Escribe un mandatario en el libro del presidente</p>
+                                    <p class="example">Ejemplo: .trump Hola WBot</p>
+                                </div>
+                            </div>
+
+                            <div id="logro" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.logro</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Escribe tu propio logro</p>
+                                    <p class="example">Ejemplo: .logro</p>
+                                </div>
+                            </div>
+
+                            <div id="kiss" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.kiss</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Dale un beso a quien mas te guste</p>
+                                    <p class="example">Ejemplo: .kiss @Pepito</p>
+                                </div>
+                            </div>
+
+                            <div id="translate" onclick="Activate(this)" class="command active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.translate</p>
+                                    <p class="usage">&lt;Idioma&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Traduce mensajes con tus amigos del extranjenro</p>
+                                    <p class="example">Ejemplo: .translate en Hola WBot</p>
+                                </div>
+                            </div>
+
+                            <div id="ig" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.ig</p>
+                                    <p class="usage">&lt;Persona&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Encuentra el instagram de cualquir persona</p>
+                                    <p class="example">Ejemplo: .ig Justin Beiber</p>
+                                </div>
+                            </div>
+
+                            <div id="calcular" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.calcular</p>
+                                    <p class="usage">&lt;Operacion&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Suma, resta, multiplica, divide y mucho mas</p>
+                                    <p class="example">Ejemplo: .calcular 3 + 3</p>
+                                </div>
+                            </div>
+
+                            <div id="link" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.link</p>
+                                    <p class="usage">&lt;Url&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Acorta un Url</p>
+                                    <p class="example">Ejemplo: .link www.google.com</p>
+                                </div>
+                            </div>
+
+                            <div id="text" onclick="Activate(this)" class="command Diversión active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.text</p>
+                                    <p class="usage">&lt;Canal&gt; &lt;Mensaje&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Enviar mensajes por canales</p>
+                                    <p class="example">Ejemplo: .text #anuncios Hola WBot</p>
+                                </div>
+                            </div>
+                            <!--  Bot Info  -->
+                            <div id="binfo" onclick="Activate(this)" class="command Bot_Info active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.binfo</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira la informacion del bot</p>
+                                    <p class="example">Ejemplo: .binfo</p>
+                                </div>
+                            </div>
+
+                            <div id="canales" onclick="Activate(this)" class="command Bot_Info active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.canales</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira los canales disponibles por servidor</p>
+                                    <p class="example">Ejemplo: .canales</p>
+                                </div>
+                            </div>
+
+                            <div id="servers" onclick="Activate(this)" class="command Bot_Info active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.servers</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira los servers en los que esta el bot</p>
+                                    <p class="example">Ejemplo: .servers</p>
+                                </div>
+                            </div>
+
+                            <div id="invite" onclick="Activate(this)" class="command Bot_Info active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.invite</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Invita y comparte el bot con tus amigos</p>
+                                    <p class="example">Ejemplo: .invite</p>
+                                </div>
+                            </div>
+                            <!--  Jugador  -->
+                            <div id="estado" onclick="Activate(this)" class="command Jugador active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.estado</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira el estado en el que esta un jugador</p>
+                                    <p class="example">Ejemplo: .estado @Pepito</p>
+                                </div>
+                            </div>
+
+                            <div id="perfil" onclick="Activate(this)" class="command Jugador active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.perfil</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira el perfil de un jugador</p>
+                                    <p class="example">Ejemplo: .perfil @Pepito</p>
+                                </div>
+                            </div>
+                            <!--  Staff  -->
+                            <div id="kick" onclick="Activate(this)" class="command Staff active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.kick</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Expulsa a un jugador del servidor</p>
+                                    <p class="example">Ejemplo: .kik @Pepito</p>
+                                </div>
+                            </div>
+                            <div id="ban" onclick="Activate(this)" class="command Staff active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.ban</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Prohibe a un jugador del servidor</p>
+                                    <p class="example">Ejemplo: .ban @Pepito</p>
+                                </div>
+                            </div>
+                            <div id="clear" onclick="Activate(this)" class="command Staff active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.clear</p>
+                                    <p class="usage">&lt;Cantidad&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Elimina mensajes el maximo es 99</p>
+                                    <p class="example">Ejemplo: .clear 99</p>
+                                </div>
+                            </div>
+                            <div id="encuesta" onclick="Activate(this)" class="command Staff active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.encuesta</p>
+                                    <p class="usage">&lt;Pregunta&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Envia encuestas a tus usuarios</p>
+                                    <p class="example">Ejemplo: .encuesta ¿Minecraft o Fortnite?</p>
+                                </div>
+                            </div>
+                            <div id="say" onclick="Activate(this)" class="command Staff active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.say</p>
+                                    <p class="usage">&lt;Mensaje&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Envia mensajes atravez del bot</p>
+                                    <p class="example">Ejemplo: .say Hola WBot</p>
+                                </div>
+                            </div>
+                            <!--  Economia  -->
+                            <div id="money" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.money</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Mira tu economia y tus gemas</p>
+                                    <p class="example">Ejemplo: .money</p>
+                                </div>
+                            </div>
+
+                            <div id="works" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.works</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Lista de Trabajos</p>
+                                    <p class="example">Ejemplo: .works</p>
+                                </div>
+                            </div>
+
+                            <div id="work" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.work</p>
+                                    <p class="usage">&lt;Trabajo&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Elije un trabajo y gana dinero</p>
+                                    <p class="example">Ejemplo: .work dj</p>
+                                </div>
+                            </div>
+
+                            <div id="baltop" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.baltop</p>
+                                    <p class="usage">&lt;Pagina&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Lista global de top millonarios</p>
+                                    <p class="example">Ejemplo: .baltop 1</p>
+                                </div>
+                            </div>
+
+                            <div id="daily" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.daily</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Reclama tu recompensa diaria</p>
+                                    <p class="example">Ejemplo: .daily</p>
+                                </div>
+                            </div>
+
+                            <div id="weekly" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.weekly</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Reclama tu recompensa Semanal</p>
+                                    <p class="example">Ejemplo: .weekly</p>
+                                </div>
+                            </div>
+
+                            <div id="monthly" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.monthly</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Reclama tu recompensa Mensual</p>
+                                    <p class="example">Ejemplo: .monthly</p>
+                                </div>
+                            </div>
+
+                            <div id="pay" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.pay</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Enviale pagos a tus amigos</p>
+                                    <p class="example">Ejemplo: .pay @Pepito</p>
+                                </div>
+                            </div>
+
+                            <div id="give" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.give</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Suma dinero a tu cuenta bancaria</p>
+                                    <p class="example">Ejemplo: .give @Pepito</p>
+                                </div>
+                            </div>
+
+                            <div id="remove" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.remove</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Resta dinero a tu cuenta bancaria</p>
+                                    <p class="example">Ejemplo: .remove @Pepito</p>
+                                </div>
+                            </div>
+
+                            <div id="rob" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.rob</p>
+                                    <p class="usage">&lt;Jugador&gt;</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Roba dinero a tus enemigos</p>
+                                    <p class="example">Ejemplo: .rob @Pepito</p>
+                                </div>
+                            </div>
+                            <div id="store" onclick="Activate(this)" class="command Economia active">
+                                <div class="basic">
+                                    <i class="fas fa-angle-right icon"></i>
+                                    <p class="name">.store</p>
+                                </div>
+                                <div class="content">
+                                    <p class="description">Abre el menu de la tienda</p>
+                                    <p class="example">Ejemplo: .store</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <div class="ftop">
+                        <div class="text">
+                            <h2 class="title">El <span class="bold">mejor</span> bot para Discord.</h2>
+                            <p class="description">Pruebalo si no nos crees y verificalo tu mismo.</p>
+                        </div>
+                    </div>
+                    <div class="fnav">
+                            <div class="row">
+                                <p class="title">Wbot</p>
+                                <div class="links">
+                                    <a href="../index.html" class="link">Inicio</a>
+                                    <a href="../commands/" class="link">Comandos</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="title">Contáctanos</p>
+                                <div class="links">
+                                    <a rel="noopener" href="../support/" class="link">Support</a>
+                                    <a rel="noopener" href="#" class="link">Team</a>
+                                </div>
+                            </div>
+                            <div class="row invite">
+                                <a href="https://discordapp.com/api/oauth2/authorize?client_id=687331352139399208&permissions=269494300&scope=bot" class="btn big">Add to Discord</a>
+                            </div>
+                    </div>
+                    <div class="foot">
+                        <span>
+                            Bot
+                            <svg class="codesvg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="brackets-curly" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-brackets-curly fa-w-18 fa-3x">
+                                <path fill="currentColor" d="M208 32h-48a96 96 0 0 0-96 96v37.48a32.06 32.06 0 0 1-9.38 22.65L9.37 233.37a32 32 0 0 0 0 45.26l45.25 45.25A32 32 0 0 1 64 346.51V384a96 96 0 0 0 96 96h48a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-48a32 32 0 0 1-32-32v-37.48a96 96 0 0 0-28.13-67.89L77.25 256l22.63-22.63A96 96 0 0 0 128 165.48V128a32 32 0 0 1 32-32h48a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zm358.63 201.37l-45.25-45.24a32.06 32.06 0 0 1-9.38-22.65V128a96 96 0 0 0-96-96h-48a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h48a32 32 0 0 1 32 32v37.47a96 96 0 0 0 28.13 67.91L498.75 256l-22.62 22.63A96 96 0 0 0 448 346.52V384a32 32 0 0 1-32 32h-48a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h48a96 96 0 0 0 96-96v-37.49a32 32 0 0 1 9.38-22.63l45.25-45.25a32 32 0 0 0 0-45.26z"></path>
+                            </svg>
+                            by Ultra Instinto
+                            <a href="https://twitter.com/SoulLexus" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/leos_019" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </span>
+                        <span>© WBot 2020</span>
+                        <span>Page 
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-code fa-w-20 fa-3x">
+                                <path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z" class=""></path>
+                            </svg> 
+                            by Elí Maciel
+                            <a href="https://twitter.com/tecnoeli" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <!--<a href="https://twitter.com/tecnoeli" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-discord"></i>
+                            </a>-->
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function Activate(e) {
+        e.classList.toggle('active');
+    }
+
+    function Show(e, el) {
+        var comandos = document.getElementsByClassName('command');
+        if (e == 'all') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.remove("show");
+            }
+        } else if (e == 'Información') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Información = document.getElementsByClassName('Información');
+            for (var i = 0; i < Información.length; i++) {
+                Información[i].classList.remove("show");
+            }
+        } else if (e == 'Importante') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Importante = document.getElementsByClassName('Importante');
+            for (var i = 0; i < Importante.length; i++) {
+                Importante[i].classList.remove("show");
+            }
+        } else if (e == 'Juegos') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Juegos = document.getElementsByClassName('Juegos');
+            for (var i = 0; i < Juegos.length; i++) {
+                Juegos[i].classList.remove("show");
+            }
+        } else if (e == 'Minecraft') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Minecraft = document.getElementsByClassName('Minecraft');
+            for (var i = 0; i < Minecraft.length; i++) {
+                Minecraft[i].classList.remove("show");
+            }
+        } else if (e == 'Diversión') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Diversión = document.getElementsByClassName('Diversión');
+            for (var i = 0; i < Diversión.length; i++) {
+                Diversión[i].classList.remove("show");
+            }
+        } else if (e == 'Bot_Info') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Bot_Info = document.getElementsByClassName('Bot_Info');
+            for (var i = 0; i < Bot_Info.length; i++) {
+                Bot_Info[i].classList.remove("show");
+            }
+        } else if (e == 'Jugador') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Jugador = document.getElementsByClassName('Jugador');
+            for (var i = 0; i < Jugador.length; i++) {
+                Jugador[i].classList.remove("show");
+            }
+        } else if (e == 'Staff') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Staff = document.getElementsByClassName('Staff');
+            for (var i = 0; i < Staff.length; i++) {
+                Staff[i].classList.remove("show");
+            }
+        } else if (e == 'Economia') {
+            for (var i = 0; i < comandos.length; i++) {
+                comandos[i].classList.add("show");
+            }
+            var Economia = document.getElementsByClassName('Economia');
+            for (var i = 0; i < Economia.length; i++) {
+                Economia[i].classList.remove("show");
+            }
+        }
+        var selected = document.getElementsByClassName('category');
+        for (var i = 0; i < selected.length; i++) {
+            selected[i].classList.remove("selected");
+        }
+        el.classList.toggle("selected");
+    }
+
+    </script>
+</body>
+
+</html>
