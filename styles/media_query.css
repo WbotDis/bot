@@ -1,0 +1,142 @@
+@media (max-width: 800px) {
+    .nav .wrapper .links{
+        margin:30px;
+    }
+    .nav .wrapper .links .link{
+        font-size: 15px;
+        margin:10px;
+    }
+
+    .main .suport .wid{
+        margin:0;
+    }
+
+    .index .intro{
+        margin:30px;
+        display:flex;
+        justify-content:space-between;
+    }
+    .index .intro .logo{
+        max-width:350px;
+    }
+    .index .intro .logo img{
+        width:100%;
+    }
+    .index .intro .text .title{
+        font-size:45px;
+        line-height:45px;
+    }
+    .index .intro .text .description{
+        font-size:25px;
+        line-height:25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav .wrapper{
+        padding: 10px;
+    }
+    .nav .wrapper .links{
+        margin:0px;
+    }
+
+    .commands .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .commands .main .categories{
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .commands .main .categories .category{
+        padding:5px;
+        min-width: 0;
+    }
+    .commands .main .wrapper{
+        width: 100%;
+    }
+
+    .main .suport{
+        flex-direction: column-reverse;
+        margin:10px;
+        align-content: center;
+    }
+    .main .suport .page{
+        margin:0;
+    }
+    .main .suport .wid{
+        min-height:500px;
+        margin-top: 20px;
+    }
+
+    .index .intro .text{
+        width:100%;
+    }
+    .index .intro .logo{
+        max-width:250px;
+    }
+    .index .pruebalo{
+        padding: 75px 20px;
+    }
+    .index .pruebalo .title{
+        line-height: .9;
+    }
+}
+
+@media (max-width: 600px){
+    .nav .wrapper{
+        height: 105px;
+    }
+    .nav .wrapper .links {
+        flex-direction: column;
+    }
+    .nav .wrapper .links .link {
+        padding:5px;
+        margin:1px;
+    }
+    #Wbot{
+        display: none;
+    }
+
+    .index .intro .logo{
+        max-width: 200px;
+    }
+    .index .intro .text{
+        width:100%;
+    }
+
+    .index .pruebalo .title{
+        font-size:30px;
+    }
+    .index .pruebalo .descripcion{
+        font-size:20px;
+        width:100%;
+    }
+    .index .pruebalo .btn{
+        margin: 0;
+    }
+    .index .intro .logo{
+        display:none;
+    }
+}
+
+@media (max-width:500px){
+    .index .intro{
+        flex-direction: column;
+    }
+    .index .intro .text{
+        text-align:center;
+    }
+    .index .intro .text .btn{
+        margin:auto;
+    }
+    .index .razones{
+        padding:20px;
+    }
+
+    footer .foot{
+        flex-direction: column;
+    }
+}
