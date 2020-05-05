@@ -256,9 +256,9 @@ body{
     width: 100%;
 }
 
-.main .suport .wid{
+.wid{
     margin: 20px;
-    flex: 1 1 30%;
+    min-height: 500px;
 }
 
 .main .suport .page{
