@@ -69,6 +69,7 @@
     .wid{
         min-height:500px;
         margin-top: 20px;
+        width: 100%;
     }
 
     .index .intro .text{
