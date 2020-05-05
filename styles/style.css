@@ -252,26 +252,31 @@ body{
 .main .suport{
     display: flex;
     flex-direction: row;
-    margin: 20px ;
+    margin: 10px ;
     width: 100%;
 }
 
 .main .suport .wid{
     margin: 20px;
-    width: 100%;
     flex: 1 1 30%;
 }
 
 .main .suport .page{
-    text-align: center;
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+#widgetbot{
+    min-height: 500px;
+}
+
+.main .suport .page .text{
+    text-align: center; 
     margin: 20px ;
-    width: 100%;
-    flex: 1 1 70%;
     font-size: 20px;
 }
 
-.main .suport .page h1{
+.main .suport .page .text h1{
     font-size: 50px;
     margin:25px;
     margin-top: 0;
