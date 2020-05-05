@@ -7,7 +7,7 @@
         margin:10px;
     }
 
-    .main .suport .wid{
+    .wid{
         margin:0;
     }
 
@@ -63,10 +63,10 @@
         margin:10px;
         align-content: center;
     }
-    .main .suport .page{
+    .main .suport .page .text{
         margin:0;
     }
-    .main .suport .wid{
+    .wid{
         min-height:500px;
         margin-top: 20px;
     }
